@@ -1,0 +1,5 @@
+.vscode/*
+__pycache__
+uploads/*.png
+uploads/*.xlsx
+uploads/*.xls

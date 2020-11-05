@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>Relationship Grapher</h1>
+        Upload your Excel spreadsheet:  
+        <form action = "/" method = "POST" 
+            enctype = "multipart/form-data">
+            <input type = "file" name = "file" accept=".xls,.xlsx" />
+            <input type = "submit"/>
+        </form>   
+        <H2>Sample spreadsheet</H2>
+        This is a sample spreadsheet in the correct format. Do not change the SHEET or COLUMN names. You can also use HTML color names.
+        <a href="/sampleFile.xlsx">sampleFile.xlsx</a>
+    </body>
+</html>

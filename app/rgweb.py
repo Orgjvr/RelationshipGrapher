@@ -37,8 +37,8 @@ def upload_file():
         inputfileTS = fileTS + file_ext
         outputfileTS = fileTS +".png"
         uploaded_file.save(os.path.join(app.config['UPLOAD_PATH'], inputfileTS))
-        #args = SimpleNamespace(**{'createcopy':False, 'excelfile' : os.path.join(app.config['UPLOAD_PATH'], inputfileTS), 'inputType':'excel', 'outputfile': os.path.join(app.config['UPLOAD_PATH'], outputfileTS), 'server':'http://www.plantuml.com/plantuml/img/', 'debug':False, 'LimitMaxLevel':0})
-        args = SimpleNamespace(**{'createcopy':False, 'excelfile' : os.path.join(app.config['UPLOAD_PATH'], inputfileTS), 'inputType':'excel', 'outputfile': os.path.join(app.config['UPLOAD_PATH'], outputfileTS), 'server':'http://deiwapp1v.standardbank.co.za:5080/img/', 'debug':False, 'LimitMaxLevel':0})
+        args = SimpleNamespace(**{'createcopy':False, 'excelfile' : os.path.join(app.config['UPLOAD_PATH'], inputfileTS), 'inputType':'excel', 'outputfile': os.path.join(app.config['UPLOAD_PATH'], outputfileTS), 'server':'http://www.plantuml.com/plantuml/img/', 'debug':False, 'LimitMaxLevel':0})
+        #args = SimpleNamespace(**{'createcopy':False, 'excelfile' : os.path.join(app.config['UPLOAD_PATH'], inputfileTS), 'inputType':'excel', 'outputfile': os.path.join(app.config['UPLOAD_PATH'], outputfileTS), 'server':'http://deiwapp1v.sb.co.za:5080/img/', 'debug':False, 'LimitMaxLevel':0})
         img = RelationshipGrapher.main(args)
     return send_from_directory("../"+app.config['UPLOAD_PATH'], outputfileTS)
     #return send_from_directory(os.path.join(app.config['UPLOAD_PATH'], outputfileTS))
